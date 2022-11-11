@@ -1,16 +1,37 @@
 import foods from "../../foods.json"
 import { useState } from "react"
 
-export function FoodList (props){
+const foodList = [...foods]
 
-    const [food, setFoood] = {useState}
+export function FoodList (){
 
-    foods.map() //?  food.map?
+  const [food, setFood] = useState(foodList)
 
-    return (
+        return (
         <div>
-        <p>{props.name.value}</p>
-        <img src={props.imgage.value} width={0} />
+            {food.map((single) => 
+            <div>
+              <p>{single.name}</p>
+            </div>
+            )}
       </div>
     )
+
+      // food.map((single)=>{
+  //   return (
+  //     <div>
+  //         <p>{single.name}</p>
+  //         <img src={single.image} width={50} ket={single.name}/>
+  //     </div>
+  //   )
+  // })
+
+    // return (
+    //     <div>
+    //         {food.map((single) => 
+    //         <p>{single.name}</p>
+    //         <img src={single.image} width={50} ket={single.name}/>)
+    //         }
+    //   </div>
+    // )
 }

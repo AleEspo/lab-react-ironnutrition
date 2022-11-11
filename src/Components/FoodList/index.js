@@ -1,11 +1,10 @@
 import foods from "../../foods.json"
 import { useState } from "react"
+import style from "./style.module.css"
 
-const foodList = [...foods]
+export function FoodList (whatToRender){
 
-export function FoodList (){
-
-  const [food, setFood] = useState(foodList)
+  const [food, setFood] = useState(foods)
 
     //     return (
     //     <div>
@@ -19,10 +18,10 @@ export function FoodList (){
     return (
       <>
         <h1>Food List</h1>
-        <div className="FoodList"></div>
+        <div></div>
         {food.map((single)=> {
           return (
-         <div>
+         <div className={style.foodList}>
            <p>{single.name}</p>
            <img src={single.image} width={50} ket={single.name} alt="food image"/>
          </div>

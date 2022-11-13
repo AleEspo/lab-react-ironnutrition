@@ -6,6 +6,7 @@ import style from "./style.module.css"
 export function FoodBox (props){
 
   const [food, setFood] = useState(foods)
+  // let totalCalories = {props.food.calories}*{props.food.servings}
     return (
       <>
         <div>
@@ -14,7 +15,7 @@ export function FoodBox (props){
           <p>Calories: {props.food.calories}</p>
           <p>Servings: {props.food.servings}</p>
           <p>
-          <b>Total Calories: </b></p><span>[({props.food.calories}*{props.food.servings})]</span> <p><b> kcal </b>
+          <b>Total Calories: </b></p> <span>[({props.food.calories}*{props.food.servings})]</span> <p><b> kcal </b>
         </p>
         </div>
       </>

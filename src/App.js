@@ -2,29 +2,21 @@ import './App.css';
 import { FoodList } from './Components/FoodList';
 import foods from './foods.json';
 import {FoodBox} from './Components/FoodBox';
+import {Row} from "antd"
 
 function App() {
   return (
     <div className="App">
-      {/* <FoodBox food={ {
-        name: "Orange",
-        calories: 85,
-        image: "https://i.imgur.com/abKGOcv.jpg",
-        servings: 1
-      }} />
-      <FoodList /> */}
-      {foods.map((currentElement) => {
-        return <FoodBox food={
-          {
-          name: currentElement.name,
-          calories: currentElement.calories,
-          image: currentElement.image,
-          servings: currentElement.servings,
-          }
-        }
+    <Row style={{ width: '100%', justifyContent: 'center' }}>
+    {foods.map((currentElement) => {
+        return <FoodBox name = {currentElement.name}
+          calories = {currentElement.calories}
+          image = {currentElement.image}
+          servings = {currentElement.servings}
         />
       }
       )}
+      </Row>
     </div>
   );
 }
